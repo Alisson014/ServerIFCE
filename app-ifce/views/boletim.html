@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim</title>
+
+    <link rel="stylesheet" href="../stylesheets/style.css">
+    <link rel="stylesheet" href="../stylesheets/responsivity.css">
+    <link rel="stylesheet" href="../stylesheets/boletim.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <button onclick="showMenu()"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="#eee" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                  </svg>
+                  
+                  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="38" fill="#eee" class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                  </svg>
+            </button>
+
+            <img src="images/logo-ifce.png">
+        </div>
+        <div class="acoes">
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#eee" class="bi bi-search" viewBox="0 0 16 16">
+                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                  </svg>
+            </button>
+
+            <button>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#eee" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                  </svg>
+            </button>
+        </div>
+
+        
+    </nav>
+      <div class="menu">
+        <form action="/ifce">
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#444" class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z"/>
+                    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293z"/>
+                    </svg>
+    
+                <span>Home</span>
+                
+            </button>
+        </form>
+        
+        <form action="/ifce/professores">
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#444" class="bi bi-p-circle-fill" viewBox="0 0 16 16">
+                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.5 4.002V12h1.283V9.164h1.668C10.033 9.164 11 8.08 11 6.586c0-1.482-.955-2.584-2.538-2.584zm2.77 4.072c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z"/>
+                    </svg>
+                
+                <span>Professores</span>
+            </button>
+        </form>
+
+        <form action="/ifce/estudantes">
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#444" class="bi bi-p-circle-fill" viewBox="0 0 62 62" translate="yes" transform="translate(-1, 0)">
+                    <path d="M 32 2 C 15.432 2 2 15.432 2 32 s 13.432 30 30 30 s 30 -13.432 30 -30 S 48.568 2 32 2 Z M 42.994 46.508 H 21.006 V 17.492 h 21.279 v 5.139 H 26.932 v 6.16 h 14.094 v 5.039 H 26.932 v 7.461 h 16.063 V 46.508 Z"/>
+                    </svg>
+    
+                <span>Estudantes</span>
+            </button>
+        </form>
+
+        <form>
+            <button type="submit">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#444" class="bi bi-p-circle-fill" viewBox="0 0 62 62" translate="yes" transform="translate(-1, 0)">
+                    <path d="m 32 2 c -16.568 0 -30 13.431 -30 30 c 0 16.569 13.432 30 30 30 s 30 -13.432 30 -30 c 0 -16.569 -13.432 -30 -30 -30 m 11.754 20.629 h -8.682 v 23.878 h -6.104 v -23.878 h -8.721 v -5.138 h 23.506 v 5.138 Z"/>
+                    </svg>
+    
+                <span>Turmas</span>
+            </button>
+        </form>
+      </div>
+
+
+    <div class="conteinerAniBol">
+        <div class="animatedBg">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            <p></p>
+        </div>
+
+        <div class="conteinerBol">        
+            <div class="conteinerBoletim">
+                
+
+                <div class="boxBoletim">
+                    <section>
+                        <h1>Boletim</h1>
+                        <div>
+                            <p id="nome"><strong>Nome: </strong>Fulano Beltrano Siclano Sicla</p>
+                            <p><strong>Série: </strong>3º Ano</p>
+                            
+                        </div>
+                        <div>
+                            <p><strong>Matrícula: </strong>40028922</p>
+                            <p><strong>Coeficiente de rendimento: </strong>10.0</p>
+                        </div>
+                        <!-- <div>
+                            
+                            <p><strong>Maior Nota: </strong>10.0</p>
+                            <p><strong>Menor Nota: </strong>10.0</p>
+                        </div> -->
+
+                        <button class="buttondownload" onclick="GeraBoletim()">Download das notas</button>
+                        
+                    </section>
+
+                    <table id="Boletim">
+                        <thead>
+                            <th>Matéria</th>
+                            <th>N1</th>
+                            <th>N2</th>
+                            <th>N3</th>
+                            <th>N4</th>
+                            <th>Situação</th>
+                        </thead>
+            
+                        <tr>
+                            <td>Arte</td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>Regular</td>
+                        </tr>
+            
+                        <tr>
+                            <td>Filosofia</td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>Regular</td>
+                        </tr>
+            
+                        <tr>
+                            <td>Matemática</td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>Regular</td>
+                        </tr>
+            
+                        <tr>
+                            <td>Português</td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>Regular</td>
+                        </tr>
+            
+                        <tr>
+                            <td>Biologia</td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>Regular</td>
+                        </tr>
+            
+                        <tr>
+                            <td>Física</td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>
+                                10.0
+                                <span>
+                                    <form>
+                                        <button title="Adicionar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+
+                                    <form>
+                                        <button title="Editar">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#0a3b74" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                                <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                                                <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                    
+                                    <form>
+                                        <button title="Remover">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#640000" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5M8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5m3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0"/>
+                                            </svg>
+                                        </button>
+                                    </form>
+                                </span>
+                            </td>
+                            <td>Regular</td>
+                        </tr>
+                    </table>
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js" integrity="sha512-PRJxIx+FR3gPzyBBl9cPt62DD7owFXVcfYv0CRNFAcLZeEYfht/PpPNTKHicPs+hQlULFhH2tTWdoxnd1UGu1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="../javascripts/boletim.js">    </script>
+</body>
+</html>

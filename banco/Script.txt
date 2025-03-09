@@ -1,0 +1,78 @@
+-- Banco de dados
+-- CREATE DATABASE ifce;
+
+-- Criação de tabelas
+CREATE TABLE professor(
+	id SERIAL PRIMARY KEY,
+	matricula VARCHAR(30) NOT NULL UNIQUE,
+	nome VARCHAR(100) NOT NULL,
+	email VARCHAR(130) NOT NULL UNIQUE,
+	departamento VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE aluno (
+	id SERIAL PRIMARY KEY,
+	matricula VARCHAR(30) NOT NULL UNIQUE,
+	nome VARCHAR(100) NOT NULL,
+	idade INT NOT NULL,
+	email VARCHAR(130) NOT NULL UNIQUE,
+	turma VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE boletim(
+	id SERIAL PRIMARY KEY,
+	aluno_id INT,
+	arte_n4 float,
+    arte_n3 float,
+    arte_n2 float,
+    arte_n1 float,
+    biologia_n4 float,
+    biologia_n3 float,
+    biologia_n2 float,
+    biologia_n1 float,
+    ed_fisica_n4 float,
+    ed_fisica_n3 float,
+    ed_fisica_n2 float,
+    ed_fisica_n1 float,
+    filosofia_n4 float,
+    filosofia_n3 float,
+    filosofia_n2 float,
+    filosofia_n1 float,
+    fisica_n4 float,
+    fisica_n3 float,
+    fisica_n2 float,
+    fisica_n1 float,
+    geografia_n4 float,
+    geografia_n3 float,
+    geografia_n2 float,
+    geografia_n1 float,
+    historia_n4 float,
+    historia_n3 float,
+    historia_n2 float,
+    historia_n1 float,
+    ingles_n4 float,
+    ingles_n3 float,
+    ingles_n2 float,
+    ingles_n1 float,
+    matematica_n4 float,
+    matematica_n3 float,
+    matematica_n2 float,
+    matematica_n1 float,
+    portugues_n4 float,
+    portugues_n3 float,
+    portugues_n2 float,
+    portugues_n1 float,
+    sociologia_n2 float,
+    sociologia_n1 float,
+    sociologia_n3 float,
+    sociologia_n4 float,
+    quimica_n4 float,
+    quimica_n3 float,
+    quimica_n2 float,
+    quimica_n1 float,
+	FOREIGN KEY (aluno_id) REFERENCES aluno(id) ON DELETE CASCADE
+);
+
+-- Inserção
+INSERT INTO professor(matricula, nome, email, departamento) 
+VALUES ('202510010', 'João Cardoso de Sá', 'joao@ifce.edu.br', 'Inglês');

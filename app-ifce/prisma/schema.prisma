@@ -1,0 +1,86 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model aluno {
+  id          Int         @id @default(autoincrement())  
+  matricula   String      @unique
+  nome        String
+  idade       Int
+  email       String      @unique
+  turma       String
+  b           boletim?
+}
+
+model professor {
+  id            Int         @id @default(autoincrement())  
+  matricula     String      @unique
+  nome          String
+  email         String      @unique
+  departamento  String
+}
+
+model boletim{
+  id                    Int         @id @default(autoincrement())
+  a                     aluno       @relation(fields: [aluno_id], references: [id])  
+  aluno_id              Int         @unique
+  arte_n4               Float
+  arte_n3               Float
+  arte_n2               Float
+  arte_n1               Float
+  biologia_n4           Float
+  biologia_n3           Float
+  biologia_n2           Float
+  biologia_n1           Float
+  ed_fisica_n4          Float
+  ed_fisica_n3          Float
+  ed_fisica_n2          Float
+  ed_fisica_n1          Float
+  filosofia_n4          Float
+  filosofia_n3          Float
+  filosofia_n2          Float
+  filosofia_n1          Float
+  fisica_n4             Float
+  fisica_n3             Float
+  fisica_n2             Float
+  fisica_n1             Float
+  geografia_n4          Float
+  geografia_n3          Float
+  geografia_n2          Float
+  geografia_n1          Float
+  historia_n4           Float
+  historia_n3           Float
+  historia_n2           Float
+  historia_n1           Float
+  ingles_n4             Float
+  ingles_n3             Float
+  ingles_n2             Float
+  ingles_n1             Float
+  matematica_n4         Float
+  matematica_n3         Float
+  matematica_n2         Float
+  matematica_n1         Float
+  portugues_n4          Float
+  portugues_n3          Float
+  portugues_n2          Float
+  portugues_n1          Float
+  sociologia_n2         Float
+  sociologia_n1         Float
+  sociologia_n3         Float
+  sociologia_n4         Float
+  quimica_n4            Float
+  quimica_n3            Float
+  quimica_n2            Float
+  quimica_n1            Float
+}

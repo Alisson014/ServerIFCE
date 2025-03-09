@@ -1,0 +1,120 @@
+.heroInitial-professores .heroInitial{
+    flex-direction: column-reverse !important;
+    gap: 40px;
+}
+.heroInitial-professores .textHero{
+    width: 100% !important;
+}
+.heroInitial-professores .ImgHero{
+    width: 100% !important;
+    /* height: 580px; */
+}
+
+
+
+.box-professores{
+    width: 100%;
+    height: fit-content;
+    padding: 50px 0px;
+    background-color:#17181a;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 14px;
+}
+.professor{
+    width: calc(86% - 60px);
+    height: 60px;
+    padding: 0px 30px;
+    background-color: #000;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.dados, .acoes-dados, .dados-r{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 40px;
+}
+.professor p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    color: #eee;
+    opacity: 0.8;
+}
+.separator{
+    font-size: 1.5rem;
+    color: #777 !important;
+}
+.acoes-dados button, .acoes-dados-r button{
+    padding: 8px 16px;
+    border: none;
+    color: #eee;
+    font-family: monospace;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+}
+.acoes-dados form:nth-child(1) button, .acoes-dados-r form:nth-child(1) button{
+    background-color: #063306;
+}
+.acoes-dados form:nth-child(2) button, .acoes-dados-r form:nth-child(2) button{
+    background-color: #061b33;
+}
+.acoes-dados form:nth-child(3) button, .acoes-dados-r form:nth-child(3) button{
+    background-color: #640000;
+}
+
+
+.acoes-dados button:nth-child(1), .acoes-dados-r button:nth-child(1){
+    background-color: #063306;
+}
+.acoes-dados button:nth-child(2), .acoes-dados-r button:nth-child(2){
+    background-color: #061b33;
+}
+.acoes-dados button:nth-child(3), .acoes-dados-r button:nth-child(3){
+    background-color: #640000;
+}
+
+.acoes-dados button:hover, .acoes-dados-r button:hover{
+    transition: .4s;
+}
+.acoes-dados button:active, .acoes-dados-r button:active{
+    border: 2px solid #eee;
+}
+
+
+.dados-r{
+    display: none ;
+}
+.acoes-dados-r{
+    /* display: none !important; */
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    flex-direction: column !important;
+    background-color: #333;
+    justify-content: center;
+    align-items: center;
+    gap: 8px 0px;
+    padding: 5px;
+    border-radius: 4px;
+    transform: scaleY(0);    
+}
+
+.acoes-button{
+    border: none;
+    height: fit-content;
+    background-color: #222;
+    border-radius: 5px;
+    padding: 3px 8px;
+}
+.appear-mobile-acoes{
+    transform: scaleY(1) translateX(-120px) translateY(-40px);
+}
+.acoes-dados-r{
+    transition: .1s;
+}
