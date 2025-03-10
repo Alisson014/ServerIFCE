@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const { PrismaClient } = require('@prisma/client');
 const { stringify } = require('querystring');
+const { error } = require('console');
 const prisma = new PrismaClient
 // const ejs = require('ejs');
 
@@ -1074,8 +1075,8 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
         html += `
                                         <tr>
                                             <td>Arte
-                                                <span>
-                                                    <button title="Adicionar">
+                                                <span onclick="updateArte(${boletim.id})">
+                                                    <button title="Alterar Nota">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
                                                         </svg>
@@ -1278,6 +1279,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js" integrity="sha512-PRJxIx+FR3gPzyBBl9cPt62DD7owFXVcfYv0CRNFAcLZeEYfht/PpPNTKHicPs+hQlULFhH2tTWdoxnd1UGu1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
                 <script src="/javascripts/boletim.js">    </script>
+                <script src="/javascripts/formBol.js">    </script>
             </body>
             </html>
         `;
@@ -1289,8 +1291,30 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
 });
 
 // Alterar nota
-app.post('/ifce/boletim/alterarnota/:id', async (req, res) => {
+app.put('/ifce/boletim/alterarnota/arte/:id', async (req, res) => {
     const { id } = req.params;
+    const { n1, n2, n3, n4 } = req.body;
+    var altvar = id;
+    altvar = altvar.replace(':', '');
+    altvar = parseInt(altvar);
+
+    try {
+        await prisma.boletim.update({
+            where: {
+                id: altvar,
+            },
+            data: {
+                arte_n1: parseFloat(n1),
+                arte_n2: parseFloat(n2),
+                arte_n3: parseFloat(n3),
+                arte_n4: parseFloat(n4),
+            },
+        });
+        res.json({message: "Alteração de nota bem sucedida"});
+    } catch(e){
+        console.error(e);
+        res.status(500).json({e: "Erro na alteração de notas"});
+    }
 })
 
 app.listen(port, () => {
