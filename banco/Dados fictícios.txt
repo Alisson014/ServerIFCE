@@ -1,0 +1,6 @@
+Matrículas de professores
+	parte padrão: 2025100 + número diferencial
+
+Matrículas alunos:
+	parte padrão: 2025100200 + número diferencial
+
