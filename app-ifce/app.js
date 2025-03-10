@@ -1288,6 +1288,11 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
     }
 });
 
+// Alterar nota
+app.post('/ifce/boletim/alterarnota/:id', async (req, res) => {
+    const { id } = req.params;
+})
+
 app.listen(port, () => {
     console.log(`Servidor Rodando na porta: http://localhost:${port}`);
   });
