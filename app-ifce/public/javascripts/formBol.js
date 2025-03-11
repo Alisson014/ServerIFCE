@@ -8,8 +8,8 @@ function PopUpAdd(){
 }
 
 
-// Alterar nota
-async function updateArte(id) {
+// Alterar notas
+async function updateNotas(id, m) {
     
     const n1 = prompt('N1:');
     const n2 = prompt('N2:');
@@ -18,12 +18,12 @@ async function updateArte(id) {
 
     console.log(id, typeof(id));
     if ((n1 && n2 && n3 && n4)) {
-      const response = await fetch(`/ifce/boletim/alterarnota/arte/:${id}`, {
+      const response = await fetch(`/ifce/boletim/alterarnota/:${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ n1, n2, n3, n4 })
+        body: JSON.stringify({ n1, n2, n3, n4, m })
       });
       if (response.ok) {
         window.location.reload();

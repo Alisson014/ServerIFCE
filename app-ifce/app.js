@@ -1075,7 +1075,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
         html += `
                                         <tr>
                                             <td>Arte
-                                                <span onclick="updateArte(${boletim.id})">
+                                                <span onclick="updateNotas(${boletim.id}, 'arte')">
                                                     <button title="Alterar Nota">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1091,7 +1091,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                         </tr>
                                         <tr>
                                             <td>Biologia
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'biologia')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1107,7 +1107,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                         </tr>
                                         <tr>
                                             <td>Ed. Fìsica
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'edfisica')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1123,7 +1123,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                         </tr>
                                         <tr>
                                             <td>Filosofia
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'filosofia')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1139,7 +1139,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                         </tr>
                                         <tr>
                                             <td>Física
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'fisica')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1155,7 +1155,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                         </tr>
                                         <tr>
                                             <td>Geografia
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'geografia')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1171,7 +1171,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                         </tr>
                                         <tr>
                                             <td>História
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'historia')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1187,7 +1187,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                         </tr>
                                         <tr>
                                             <td>Inglês
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'ingles')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1203,7 +1203,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                         </tr>
                                         <tr>
                                             <td>Matemática
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'matematica')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1219,7 +1219,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                         </tr>
                                         <tr>
                                             <td>Português
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'portugues')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1234,24 +1234,8 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                             <td class="situacao10" >Regular</td>
                                         </tr>
                                         <tr>
-                                            <td>Sociologia
-                                                <span>
-                                                    <button title="Adicionar">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
-                                                            <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
-                                                        </svg>
-                                                    </button>
-                                                </span>
-                                            </td>
-                                            <td class="s11"> ${boletim.sociologia_n1} </td>
-                                            <td class="s11"> ${boletim.sociologia_n2} </td>
-                                            <td class="s11"> ${boletim.sociologia_n3} </td>
-                                            <td class="s11"> ${boletim.sociologia_n4} </td>
-                                            <td class="situacao11" >Regular</td>
-                                        </tr>
-                                        <tr>
                                             <td>Química
-                                                <span>
+                                                <span onclick="updateNotas(${boletim.id}, 'quimica')">
                                                     <button title="Adicionar">
                                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
                                                             <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
@@ -1264,6 +1248,22 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                             <td class="s12"> ${boletim.quimica_n3} </td>
                                             <td class="s12"> ${boletim.quimica_n4} </td>
                                             <td class="situacao12" >Regular</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Sociologia
+                                                <span onclick="updateNotas(${boletim.id}, 'sociologia')">
+                                                    <button title="Adicionar">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#063306" class="bi bi-shift-fill" viewBox="0 0 16 16">
+                                                            <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816z"/>
+                                                        </svg>
+                                                    </button>
+                                                </span>
+                                            </td>
+                                            <td class="s11"> ${boletim.sociologia_n1} </td>
+                                            <td class="s11"> ${boletim.sociologia_n2} </td>
+                                            <td class="s11"> ${boletim.sociologia_n3} </td>
+                                            <td class="s11"> ${boletim.sociologia_n4} </td>
+                                            <td class="situacao11" >Regular</td>
                                         </tr>
                                     </tbody>
                                     
@@ -1291,26 +1291,191 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
 });
 
 // Alterar nota
-app.put('/ifce/boletim/alterarnota/arte/:id', async (req, res) => {
+app.put('/ifce/boletim/alterarnota/:id', async (req, res) => {
     const { id } = req.params;
-    const { n1, n2, n3, n4 } = req.body;
+    const { n1, n2, n3, n4, m } = req.body;
     var altvar = id;
     altvar = altvar.replace(':', '');
     altvar = parseInt(altvar);
 
+    // Marco local
+
     try {
-        await prisma.boletim.update({
-            where: {
-                id: altvar,
-            },
-            data: {
-                arte_n1: parseFloat(n1),
-                arte_n2: parseFloat(n2),
-                arte_n3: parseFloat(n3),
-                arte_n4: parseFloat(n4),
-            },
-        });
-        res.json({message: "Alteração de nota bem sucedida"});
+        
+        switch (m){
+            case "arte":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        arte_n1: parseFloat(n1),
+                        arte_n2: parseFloat(n2),
+                        arte_n3: parseFloat(n3),
+                        arte_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "biologia":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        biologia_n1: parseFloat(n1),
+                        biologia_n2: parseFloat(n2),
+                        biologia_n3: parseFloat(n3),
+                        biologia_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "edfisica":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        ed_fisica_n1: parseFloat(n1),
+                        ed_fisica_n2: parseFloat(n2),
+                        ed_fisica_n3: parseFloat(n3),
+                        ed_fisica_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "filosofia":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        filosofia_n1: parseFloat(n1),
+                        filosofia_n2: parseFloat(n2),
+                        filosofia_n3: parseFloat(n3),
+                        filosofia_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "fisica":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        fisica_n1: parseFloat(n1),
+                        fisica_n2: parseFloat(n2),
+                        fisica_n3: parseFloat(n3),
+                        fisica_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "geografia":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        geografia_n1: parseFloat(n1),
+                        geografia_n2: parseFloat(n2),
+                        geografia_n3: parseFloat(n3),
+                        geografia_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "historia":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        historia_n1: parseFloat(n1),
+                        historia_n2: parseFloat(n2),
+                        historia_n3: parseFloat(n3),
+                        historia_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "ingles":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        ingles_n1: parseFloat(n1),
+                        ingles_n2: parseFloat(n2),
+                        ingles_n3: parseFloat(n3),
+                        ingles_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "matematica":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        matematica_n1: parseFloat(n1),
+                        matematica_n2: parseFloat(n2),
+                        matematica_n3: parseFloat(n3),
+                        matematica_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "portugues":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        portugues_n1: parseFloat(n1),
+                        portugues_n2: parseFloat(n2),
+                        portugues_n3: parseFloat(n3),
+                        portugues_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "sociologia":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        sociologia_n1: parseFloat(n1),
+                        sociologia_n2: parseFloat(n2),
+                        sociologia_n3: parseFloat(n3),
+                        sociologia_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            case "quimica":
+                await prisma.boletim.update({
+                    where: {
+                        id: altvar,
+                    },
+                    data: {
+                        quimica_n1: parseFloat(n1),
+                        quimica_n2: parseFloat(n2),
+                        quimica_n3: parseFloat(n3),
+                        quimica_n4: parseFloat(n4),
+                    },
+                });
+                res.json({message: "Alteração de nota bem sucedida"});
+                break;
+            default:
+                throw new Error("Matéria inexistente");
+        }
+
+        
     } catch(e){
         console.error(e);
         res.status(500).json({e: "Erro na alteração de notas"});

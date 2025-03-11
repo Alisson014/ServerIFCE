@@ -61,15 +61,16 @@ const Tagmaiornota = document.getElementById('maiornota');
 const Tagmenornota = document.getElementById('menornota');
 
 var cfr = 0.0;
-var menornota = 0.0;
-var maiornota = 0.0;
+var menornota = notas[0];
+var maiornota = notas[0];
 
 notas.forEach(n => {
     cfr += n;
     n > maiornota ? maiornota = n : maiornota;
     n < menornota ? menornota = n : menornota;
 });
-Tagcfr.innerHTML = `<strong>Coeficiente de rendimento: </strong>${cfr}`;
+cfr = cfr/notas.length;
+Tagcfr.innerHTML = `<strong>Coeficiente de rendimento: </strong>${cfr.toFixed(2)}`;
 Tagmaiornota.innerHTML = `<strong>Maior Nota: </strong>${maiornota}`;
 Tagmenornota.innerHTML = `<strong>Menor Nota: </strong>${menornota}`;
 
