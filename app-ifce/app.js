@@ -113,7 +113,7 @@ app.get('/ifce/professores', async (req, res) => {
                 </form>
 
                 <form>
-                    <button type="submit">
+                    <button type="submit" title="Feuture ainda não realizada">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#444" class="bi bi-p-circle-fill" viewBox="0 0 62 62" translate="yes" transform="translate(-1, 0)">
                             <path d="m 32 2 c -16.568 0 -30 13.431 -30 30 c 0 16.569 13.432 30 30 30 s 30 -13.432 30 -30 c 0 -16.569 -13.432 -30 -30 -30 m 11.754 20.629 h -8.682 v 23.878 h -6.104 v -23.878 h -8.721 v -5.138 h 23.506 v 5.138 Z"/>
                             </svg>
@@ -254,10 +254,10 @@ app.get('/ifce/professores', async (req, res) => {
 
                                 <div class="links">
                                     <h2>Links</h2>
-                                    <a href="#">Home</a>
-                                    <a href="#">Professores</a>
-                                    <a href="#">Estudantes</a>
-                                    <a href="#">Turmas</a>
+                                    <a href="/ifce">Home</a>
+                                    <a href="/ifce/professores">Professores</a>
+                                    <a href="/ifce/estudantes">Estudantes</a>
+                                    <a title="Feuture ainda não realizada">Turmas</a>
                                 </div>
                         </section>
                         <hr/>
@@ -597,7 +597,7 @@ app.get('/ifce/estudantes', async (req, res) => {
                 </form>
 
                 <form>
-                    <button type="submit">
+                    <button type="submit" title="Feuture ainda não realizada">
                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#444" class="bi bi-p-circle-fill" viewBox="0 0 62 62" translate="yes" transform="translate(-1, 0)">
                             <path d="m 32 2 c -16.568 0 -30 13.431 -30 30 c 0 16.569 13.432 30 30 30 s 30 -13.432 30 -30 c 0 -16.569 -13.432 -30 -30 -30 m 11.754 20.629 h -8.682 v 23.878 h -6.104 v -23.878 h -8.721 v -5.138 h 23.506 v 5.138 Z"/>
                             </svg>
@@ -741,10 +741,10 @@ app.get('/ifce/estudantes', async (req, res) => {
 
                                 <div class="links">
                                     <h2>Links</h2>
-                                    <a href="#">Home</a>
-                                    <a href="#">Professores</a>
-                                    <a href="#">Estudantes</a>
-                                    <a href="#">Turmas</a>
+                                    <a href="/ifce">Home</a>
+                                    <a href="/ifce/professores">Professores</a>
+                                    <a href="/ifce/estudantes">Estudantes</a>
+                                    <a title="Feuture ainda não realizada">Turmas</a>
                                 </div>
                         </section>
                         <hr/>
@@ -1005,7 +1005,7 @@ app.get('/ifce/estudante/boletim/:id', async (req, res) => {
                                 </form>
 
                                 <form>
-                                    <button type="submit">
+                                    <button type="submit" title="Feuture ainda não realizada">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#444" class="bi bi-p-circle-fill" viewBox="0 0 62 62" translate="yes" transform="translate(-1, 0)">
                                             <path d="m 32 2 c -16.568 0 -30 13.431 -30 30 c 0 16.569 13.432 30 30 30 s 30 -13.432 30 -30 c 0 -16.569 -13.432 -30 -30 -30 m 11.754 20.629 h -8.682 v 23.878 h -6.104 v -23.878 h -8.721 v -5.138 h 23.506 v 5.138 Z"/>
                                             </svg>
